@@ -1,0 +1,78 @@
+<div class="container text-center m-5">
+    <hr>
+    <h1>
+        {{ titulo }} de la App
+    </h1>
+    <hr>
+</div>
+{{!-- CARRUSEL bootstrap --}}
+<div id="carouselExampleCaptions" class="carousel slide container" data-bs-ride="false">{{!-- container para centrar todo. La clase container no abarca el 100% del width --}}
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://static.independent.co.uk/2022/10/17/19/Screen%20Shot%202022-10-17%20at%2011.03.28%20AM.png?width=400" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="https://cazaofertas.com.ar/wp-content/uploads/2022/11/caromar-gana-carretas-con-productos-de-marcas-li%CC%81deres-merchandising-de-fu%CC%81tbol.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+        <img src="https://d22fxaf9t8d39k.cloudfront.net/6d3b0d607cfaf242fa481d897f9bd879024d238c71b89efac1a3cc262d31af07114698.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+        </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container text-center m-5">
+    <hr>
+    <h1>
+        Listas de productos de la App
+    </h1>
+    <hr>
+</div>
+
+{{!-- tabla desde bootstrap --}}
+<table class="table table-striped container" id="miTabla">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Producto</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Descripción</th>
+    </tr>
+  </thead>
+ {{!-- Hago un bucle de HBS --}}
+ 
+  <tbody>
+    
+    {{#each datos}}
+    <tr>
+      <th scope="row">{{ idProducto }}</th>
+      <td>{{ nombre }}</td>
+      <td>{{ precio }}</td>
+      <td>{{ descripcion }}</td>
+    </tr>
+   {{/each}}
+  </tbody>
+</table>

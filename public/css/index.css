@@ -1,0 +1,13 @@
+body{
+    background: rgb(204, 178, 178);
+}
+
+
+.title{
+    color: blue;
+}
+
+.carousel-item{
+   
+    height: 500px;
+}
